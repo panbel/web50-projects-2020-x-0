@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: About
+{% endblock %}
+
+{% block main %}
+    <body class="actual_container">
+        <h1 class="titles_main_header">ΠΟΙΟΣ ΕΙΜΑΙ</h1>
+        <!--<div class="main_photos">-->
+        <div class="image_grid">
+            <div class="row">
+                <div class="column">
+                    <img src="\static\photos_billy\2.png" alt="Basilis Belias" style="width:100%; height: 80%; margin-left: -10px;">
+                </div>
+                <div class="column" id="special">
+                    <img src="\static\photos_billy\1.png" alt="Basilis Belias" style="width:100%"> <!-- todo: cant center it vertically-->
+                </div>
+                <div class="column">
+                    <img src="\static\photos_billy\3.png" alt="Basilis Belias" style="width:100%; height: 80%;">
+                </div>
+            </div>
+        </div>
+
+        <div class="about_main_container">
+            <div class="studies_container"></div>
+            <div class="studies_text">
+                <h1 class="titles_secondary_header" style="padding-top: 40px;">Σπουδές</h1>
+                <p>
+                    στεβενσ ινστιτυτ. Built purse maids cease her ham new seven among and. Pulled coming wooded tended it answer remain me be. So landlord by we unlocked sensible it. Fat cannot use denied excuse son law. Wisdom happen suffer common the appear ham beauty her had. Or belonging zealously existence as by resources.
+                </p>
+            </div>
+        </div>
+        <div>
+            <div class="work-experience-container">
+                <h1 class="titles_secondary_header" style="padding-bottom: 30px;">Επαγγελματικές εμπειρίες</h1>
+                <table class="table-work-experience">
+                    <tr class="table-headers">
+                        <th>Επάγγελμα</th>
+                        <th>Χρονικό Διάστημα</th>
+                        <th>Εταιρεία</th>
+                    </tr>
+                    <tr class="table-single-job">
+                        <td>Δημοτικός Σύμβουλος</td>
+                        <td>1/1/2019-Σήμερα</td>
+                        <td>Ονομα</td>
+                    </tr>
+                    <tr class="table-single-job">
+                        <td>Τομεάρχης</td>
+                        <td>1/1/1990-1/1/2019</td>
+                        <td>ΔΕΗ</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </body>
+{% endblock %}

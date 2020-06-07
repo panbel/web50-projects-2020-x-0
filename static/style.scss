@@ -1,0 +1,293 @@
+/*@font-face{
+    src: url(\fontstyle\noto_serif\NotoSerif-Italic.ttf);  downloaded a font from google fonts
+    font-family: main_title_font;
+}*/
+$phone-font-color: orange;
+
+%titles{
+    font-size: 40pt;
+    font-family: Helvetica, sans-serif;
+    font-weight: 20;
+}
+
+
+.main_container{
+    margin-right: 120px;
+    margin-left: 120px;
+    background-color: white;
+    text-align: center;
+}
+
+.actual_container{
+    text-align: center;
+    margin-right: 20px;
+    margin-left: 20px;
+}
+
+.image_grid{
+    height: 80vh;
+    width: 100%;
+    text-align: center;
+    overflow:visible;
+    /* Three image containers (use 25% for four, and 50% for two, etc) */
+    .column{
+        display:inline-block;
+        width:33%;
+        height:auto;
+        padding-left: 20px;
+    }
+    #special{
+        position: relative;
+        float: left;
+        padding-top: 120px;
+    }
+}
+
+.about_main_container{
+    padding-top: 70px;
+    position: relative;
+    .studies_container{
+        background-image: url("https://images.techhive.com/images/article/2015/09/library-100616524-large.jpg");
+        height: 100vh;
+        width: 100%;
+        filter: blur(2px);
+        -webkit-filter: blur(2px);
+        background-repeat:no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .studies_text {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+      }
+}
+
+.work-experience-container{
+    padding-top: 40pt;
+    height: 100vh;
+    margin-right: 30px;
+    margin-left: 30px;
+    position:relative;
+    .table-work-experience{
+        width:100%;
+        border: 1px solid black;
+        border-collapse: collapse;
+        tr:nth-child(even) {
+            background-color: #eee;
+        }
+        tr:nth-child(odd) {
+           background-color: #fff;
+        }
+        tr, th, td{
+            border: 1px solid black;
+        }
+        th{
+            font-size: 20pt;
+        }
+        td{
+            font-size: 15pt;
+        }
+    }
+}
+
+
+.titles_main_header{
+    @extend %titles;
+    text-align: center;
+    font-weight: 20;
+}
+
+.index_title{
+    font-size: 40pt;
+    font-family: Helvetica, sans-serif;
+}
+
+.logo_top_right{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 20pt;
+    text-align: center;
+    color: rgba(97, 96, 96, 0.89);
+    &:hover{
+        font-style: bold;
+        text-decoration: none;
+        color:rgba(0, 0, 0, 0.89); 
+    }
+}
+.titles_main_header{
+    @extend %titles;
+    text-align: center;
+    padding-top: 20px;
+}
+
+
+.index_first_container{
+    width: 100%;
+    background-image: url('https://greekcitytimes.com/wp-content/uploads/2020/04/1920px-Classic_view_of_Acropolis-1024x683.jpg');
+    background-repeat:no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 92vh;
+    .quote{
+        font-family: Garamond, cursive, Arial, Helvetica, sans-serif;
+        font-size: 40pt;
+        font-weight: 100;
+        color: white;
+        position: relative;
+        top: 60px;
+        left: 40px;
+        right: 40px;
+        text-align: center;
+    }
+}
+
+
+.index_second_container{
+    padding-top: 40pt;
+    height: 100vh;
+    margin-right: 30px;
+    margin-left: 30px;
+    position:relative;
+
+    .beliefs{
+        font-size: 38px;
+        font-family: Garamond, Arial, Helvetica, sans-serif;
+        padding-top: 8pt;
+    }
+}
+
+.index_third_container{
+    height: 100vh;
+    width: 100%;
+    position:relative;
+    background-image: url('photos_billy/rafina_my.jpeg');
+    background-position: center;
+    background-size: cover;
+
+    .title_main_third{
+        @extend %titles;
+        color: white;
+        padding-top: 40pt;
+    }
+    .news_div{
+        padding-top: 50pt;
+        margin-left: 15px;
+        margin-left: 15px;
+        text-align: center;
+        color:white;
+    }
+    .column_news{
+        display:inline-block;
+        width:40%;
+        padding-left: 30px;
+        color:white;
+        text-align:justify;
+        font-weight: lighter;
+        text-shadow: white;
+    .short-text { display: none; } // Hide short text by default (resolution > 800px)
+
+        @media only screen and (max-width: 800px){
+            h2, h4, button{
+                font-size: 75%;
+                text-align: center;
+                color: $phone-font-color;
+            }
+            button{
+                width: 70%;
+                height: 70%;
+                .short-text { 
+                    font-size:80%;
+                    display: inline-block; 
+                    text-align: left;
+                }
+                .full-text { display: none; }
+            }
+        }
+    }
+
+    
+    .news_titles{
+        text-align: center;
+    }
+}
+
+
+.beliefs-container{
+    width: 80%;
+    display: inline-block;
+    text-align: justify;
+}
+
+.flashes{
+    font-size: 30pt;
+    font-style: italic;
+    .succesful-flash{
+        list-style: none;
+        color: rgb(27, 124, 27);
+    }
+}
+
+.contact-first-container{
+    background-image: url("/static/photos_billy/rafina_my3.jpeg");
+    height: 100vh;
+    width: 100%;
+    position:relative;
+    background-position: center;
+    background-size: cover;
+
+    .contact_text_container {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.articles-first-container{
+    background-image: url("/static/photos_billy/rafina_my2.jpeg");
+    height: 100vh;
+    width: 100%;
+    position:relative;
+    background-position: center;
+    background-size: cover;
+
+    .articles-text-container {
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+        color: white;
+        font-weight: bold;
+        border: 3px solid #f1f1f1;
+        position:absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+        width: 80%;
+        padding: 20px;
+        text-align: center;
+    }
+}
+
+.error{
+    font-style: italic;
+    color: red;
+}

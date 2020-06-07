@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Contact
+{% endblock %}
+
+{% block main %}
+    <body>
+        <div class="contact-first-container">
+            <p class="titles_main_header" style="color:white;">ΕΠΙΚΟΙΝΩΝΙΑ</p>
+            <div class="contact_text_container">
+                <form action="{{ url_for('contact') }}" method="POST">
+                    <p>Προσωπικό email: basilis.belias@gmail.com</p>
+                    <br>
+                    <p>Βάλτε το email σας για να λάβετε νέα μου</p>
+                    <p><input type="email" autocomplete="off" name="email" placeholder="Email"></p>
+                    {% if error %}
+                        <p class=error><strong>Error:</strong> {{ error }}</p>
+                    {% endif %}
+                    <input type="submit" value="Submit!">
+                </form>
+            </div>
+        </div>
+    </body>
+{% endblock %}

@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block title %}
+: Home
+{% endblock %}
+
+{% block main %}
+    <body class="actual_container">
+        <div class="index_first_container">
+            {% with messages = get_flashed_messages() %}
+            {% if messages %}
+                <ul class="flashes">
+                {% for message in messages %}
+                    <li class="succesful-flash">{{ message }}</li>
+                {% endfor %}
+                </ul>
+            {% endif %}
+            {% endwith %}
+            <h1 class="quote">
+                "Για να ξεβρωμίσει ο τόπος από τα αδέσποτα"
+            </h1>
+        </div>
+
+        <div class="index_second_container">
+            <h1 class="titles_main_header">Τι πιστεύω</h1>
+            <div>
+                <h2 class="beliefs">Τα πράγματα αλλάζουν μόνο από κάτω προς τα πάνω</h2>
+                <h2 class="beliefs">Μαζί καταφέρνουμε περισσότερα απ’ ό,τι ο καθένας μόνος του</h2>
+                <h2 class="beliefs">Ο πολιτικός είναι για να υπηρετεί τον άνθρωπο και όχι το αντίστροφο</h2>
+                <h2 class="beliefs">Ν’ αγαπάς την ευθύνη</h2>
+
+                <a href="/beliefs" class="btn btn-dark" style="position: absolute; bottom: 30px; left: 50%; transform: translateX(-50%);">Διαβάστε περισσότερα</a>
+            </div>
+        </div>
+
+        <div class="index_third_container">
+            <h1 class="title_main_third">Νέα</h1>
+            <div class="news_div">
+                <div class="column_news">
+                    <h2 class="news_titles">Αμίαντος</h2>
+                    <h4>Built purse maids cease her ham new seven among and. Pulled coming wooded tended it answer remain me be. So landlord by we unlocked sensible it. Fat cannot use denied excuse son law. Wisdom happen suffer common the appear ham beauty her had. Or belonging zealously existence as by resources. </h4>
+                    <h6>32/05/2020</h6>
+                    <div style="text-align: center; padding-top: 10px;">
+                        <button class="btn btn-light" type="submit" onclick="window.open('static/articles/amiantos.pdf')"><span class="full-text">Διαβάστε περισσότερα!</span><span class="short-text">Περισσότερα!</span></button>
+                    </div>
+                </div>
+                <div class="column_news">
+                    <h2 class="news_titles">Αποτελέσματα δημοτικές εκλογές</h2>
+                    <h4>Built purse maids cease her ham new seven among and. Pulled coming wooded tended it answer remain me be. So landlord by we unlocked sensible it. Fat cannot use denied excuse son law. Wisdom happen suffer common the appear ham beauty her had. Or belonging zealously existence as by resources. </h4>
+                    <h6>32/05/2020</h6>
+                    <div style="text-align: center; padding-top: 10px;">
+                        <button class="btn btn-light" type="submit" onclick="window.open('static/articles/results.docx')"><span class="full-text">Διαβάστε περισσότερα!</span><span class="short-text">Περισσότερα!</span></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+{% endblock %}
